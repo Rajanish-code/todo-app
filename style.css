@@ -1,0 +1,157 @@
+:root{
+    --primary-color:#2563EB;
+    --primary-hover:#1D4ED8;
+    --background-color:#F8FAFC;
+    --card-color:#FFFFFF;
+    --heading-color:#0F172A;
+    --text-color:#334155;
+    --muted-color:#64748B;
+    --border-color:#E2E8F0;
+    --edit-color:#7C3AED;
+    --delete-color:#DC2626;
+    --success-color:#16A34A;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+body section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+.todo-container{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.todo-container h1{
+    color: var(--heading-color);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.input-container input{
+width: 100%;
+padding: 5px;
+cursor: pointer;
+color: var(--text-color);
+}
+
+.input-container textarea{
+    width: 100%;
+    padding: 15px;
+    color: var(--text-color);
+}
+
+.input-container button{
+    width: 100%;
+    padding: 5px;
+    border-color: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.input-container button:hover{
+    background-color: var(--primary-hover);
+}
+
+.todo-header{
+    width: 100%;
+}
+
+.todo-header ul{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    list-style-type: none;
+    gap: 13px;
+}
+
+.todo-list{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    background-color: var(--muted-color);
+    color: #FFFFFF;
+}
+
+.list-button{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.list-button .fa-pen-to-square{
+    color: var(--edit-color);
+    cursor: pointer;
+}
+
+.list-button .fa-trash{
+    color: var(--delete-color);
+    cursor: pointer;
+}
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    background-color: var(--success-color);
+    color: var(--card-color);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.15);
+
+    z-index: 9999;
+}
+
+.success-message i {
+    font-size: 18px;
+}
